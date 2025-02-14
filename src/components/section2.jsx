@@ -27,14 +27,14 @@ const HappeningSection = () => {
           {/* Right Column: Stacked Images in Two Rows */}
           <div className="right-column">
             <div className="image-row">
-              <img src="public/image1.jpg"  className="event-image img-1" />
-              <img src="public/image2.jpg"  className="event-image img-2" />
-              <img src="public/image3.jpg"  className="event-image img-3" />
+              <img src="image1.jpg"  className="event-image img-1" />
+              <img src="image2.jpg"  className="event-image img-2" />
+              <img src="image3.jpg"  className="event-image img-3" />
             </div>
             <div className="image-row">
-              <img src="public/image4.jpg"  className="event-image img-4" />
-              <img src="public/image5.jpg"  className="event-image img-5" />
-              <img src="public/image6.jpg"  className="event-image img-6" />
+              <img src="image4.jpg"  className="event-image img-4" />
+              <img src="image5.jpg"  className="event-image img-5" />
+              <img src="image6.jpg"  className="event-image img-6" />
             </div>
           </div>
         </div>

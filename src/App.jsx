@@ -2,12 +2,14 @@ import { useState } from 'react'
 import './App.css'
 import Section1 from './components/section1'
 import './fonts.css'; 
+import Navbar from "./components/Navbar";
 import HappeningSection from './components/section2';
 
 function App() {
   return (
     <>
       <div className='Container'>
+        <Navbar />
         <div className='Section 1'>
 
           <Section1/>
