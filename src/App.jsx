@@ -6,6 +6,7 @@ import Section1 from './components/section1'
 import './fonts.css'; 
 import HappeningSection from './components/section2';
 import CursorGlow from './components/CursorGlow';
+import GlowingLogoPage from './components/section3'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,21 +26,13 @@ function App() {
 
           <Section1/>
         </div>
-        <div className='Section 1'>
+        <div className='Section 2'>
           <HappeningSection />
         </div>
-        <div className='Section 1'>
-          <h1>Section 3</h1>
+        <div className='Section 3'>
+          <GlowingLogoPage/>
         </div>
-        <div className='Section 1'>
-          <h1>Section 4</h1>
-        </div>
-        <div className='Section 1'>
-          <h1>Section 5</h1>
-        </div>
-        <div className='Section 1'>
-          <h1>Section 6</h1>
-        </div>
+
        </div>
 
     </>
