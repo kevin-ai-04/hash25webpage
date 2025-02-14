@@ -30,11 +30,11 @@ section {
 /* Background logo */
 .logo-bg {
   position: absolute;
-  width: 500%; /* Slightly larger than container */
+  width: 200%; /* Slightly larger than container */
   height: auto;
   max-width: none;
   z-index: 0;
-  transform: translateX(-50%);
+  transform: translate(-50%, -3%);
   left: 50%; /* Ensures it's centered */
 }
 
@@ -45,6 +45,7 @@ section {
   height: auto;
   max-width: none;
   z-index: 1;
+  transform: translate(-12%, -3%);
 }
 
 /* Prize pool text */
@@ -54,6 +55,8 @@ section {
   color: white;
   font-size: 1.5rem;
   margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:bolder;
 }
 
 /* Mobile View Adjustments */
@@ -64,12 +67,13 @@ section {
   }
 
   .logo-bg {
-    width: 150%; /* Expand background for mobile */
-    transform: translateX(-50%);
+    width: 100%; /* Expand background for mobile */
+    transform: translate(-50%,-3%);
     left: 50%;
   }
 
   .logo {
     width: 90%; /* Ensure logo fits */
+    transform: translate(0%, 0%);
   }
 }
