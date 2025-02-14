@@ -1,19 +1,75 @@
+/* Prevent horizontal scrolling */
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure section takes full width */
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* Logo container */
 .logo-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  width: 100%; /* Takes full width */
+  max-width: 600px; /* Limits size on larger screens */
+  aspect-ratio: 1/1; /* Maintains a square shape */
 }
 
-.logo {
-  width: 70vw; /* Adjust as needed */
+/* Background logo */
+.logo-bg {
+  position: absolute;
+  width: 500%; /* Slightly larger than container */
   height: auto;
+  max-width: none;
+  z-index: 0;
+  transform: translateX(-50%);
+  left: 50%; /* Ensures it's centered */
 }
 
+/* Foreground logo */
+.logo {
+  position: absolute;
+  width: 120%; /* Adjust as needed */
+  height: auto;
+  max-width: none;
+  z-index: 1;
+}
+
+/* Prize pool text */
 .prize-pool {
   position: relative;
   text-align: center;
   color: white;
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  .logo-container {
+    max-width: 90vw; /* Scale logo container for small screens */
+    aspect-ratio: 1/1;
+  }
+
+  .logo-bg {
+    width: 150%; /* Expand background for mobile */
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .logo {
+    width: 90%; /* Ensure logo fits */
+  }
 }
