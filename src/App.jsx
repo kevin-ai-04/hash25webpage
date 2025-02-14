@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+
+import CustomCursor from "./components/CustomCursor";
 import Section1 from './components/section1'
 import './fonts.css'; 
 import Navbar from "./components/Navbar";
@@ -9,6 +11,7 @@ function App() {
   return (
     <>
       
+      <CustomCursor />
       <div className='Container'>
         <Navbar />
         <div className='Section 1'>

@@ -7,8 +7,5 @@
   padding: 2em;
 }
 
-body {
-  background-image: url('/texture.png'); /* Adjust path if needed */
-  background-repeat: repeat; /* Ensures infinite tiling */
-  background-size: auto; /* Keeps the natural size of the texture */
-}
+/* body {
+} */

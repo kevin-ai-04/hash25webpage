@@ -36,6 +36,7 @@ section {
   z-index: 0;
   transform: translate(-50%, -3%);
   left: 50%; /* Ensures it's centered */
+  transition: transform 0.8s ease-in-out;
 }
 
 /* Foreground logo */
@@ -46,6 +47,7 @@ section {
   max-width: none;
   z-index: 1;
   transform: translate(-12%, -3%);
+  transition: transform 0.8s ease-in-out;
 }
 
 /* Prize pool text */
@@ -56,7 +58,23 @@ section {
   font-size: 1.5rem;
   margin-top: 20px;
   font-family: 'Courier New', Courier, monospace;
-  font-weight:bolder;
+  font-weight: bolder;
+}
+
+/* Hover Effect - Desktop */
+@media screen and (min-width: 769px) {
+  /* Make sure .logo-container detects the hover */
+  .logo-container:hover .logo {
+    transform: translate(-12%, -3%) scale(1.12); /* Foreground logo expands more */
+  }
+
+  .logo-container:hover .logo-bg {
+    transform: translate(-50%, -4%) scale(1.05); /* Background logo expands slightly */
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
 }
 
 /* Mobile View Adjustments */
@@ -64,16 +82,35 @@ section {
   .logo-container {
     max-width: 90vw; /* Scale logo container for small screens */
     aspect-ratio: 1/1;
+    animation: subtleContainer 6s infinite alternate ease-in-out;
   }
 
   .logo-bg {
     width: 100%; /* Expand background for mobile */
-    transform: translate(-50%,-3%);
+    transform: translate(-50%, -3%);
     left: 50%;
+    animation: subtleBg 6s infinite alternate ease-in-out;
   }
 
   .logo {
     width: 90%; /* Ensure logo fits */
     transform: translate(0%, 0%);
+    animation: subtleLogo 6s infinite alternate ease-in-out;
   }
+}
+
+/* Subtle independent animations for mobile */
+@keyframes subtleContainer {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+@keyframes subtleBg {
+  0% { transform: translate(-50%, -3%) scale(1); }
+  100% { transform: translate(-50%, -4%) scale(1.03); }
+}
+
+@keyframes subtleLogo {
+  0% { transform: translate(0%, 0%) scale(1); }
+  100% { transform: translate(1%, -1%) scale(1.05); }
 }
