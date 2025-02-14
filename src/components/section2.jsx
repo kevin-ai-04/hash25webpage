@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './section2.css';
 
+const images = [
+  { src: 'image1.jpg', title: 'Coding Challenge' },
+  { src: 'image2.jpg', title: 'Robotics Workshop' },
+  { src: 'image3.jpg', title: 'Hackathon' },
+  { src: 'image4.jpg', title: 'Tech Talks' },
+  { src: 'image5.jpg', title: 'Project Expo' },
+  { src: 'image6.jpg', title: 'Innovation Showcase' }
+];
+
 const HappeningSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="happening-section">
       <div className="container">
-        {/* Heading Section */}
         <h2 className="heading">
           WHAT’S <span className="highlight">#ISHAPPENING</span>
         </h2>
 
         <div className="content">
-          {/* Left Column: Body Text */}
           <div className="left-column">
             <p className="description">
               The department of <strong>Computer Science</strong> and Engineering of 
@@ -24,17 +40,30 @@ const HappeningSection = () => {
             </p>
           </div>
 
-          {/* Right Column: Stacked Images in Two Rows (Staircase design) */}
-          <div className="right-column">
-            <div className="image-row">
-              <img src="image1.jpg" alt="Event 1" className="event-image img-1" />
-              <img src="image2.jpg" alt="Event 2" className="event-image img-2" />
-              <img src="image3.jpg" alt="Event 3" className="event-image img-3" />
-            </div>
-            <div className="image-row">
-              <img src="image4.jpg" alt="Event 4" className="event-image img-4" />
-              <img src="image5.jpg" alt="Event 5" className="event-image img-5" />
-              <img src="image6.jpg" alt="Event 6" className="event-image img-6" />
+          <div className="image-carousel">
+            {images.map((image, index) => {
+              let position = '';
+              if (index === activeIndex) position = 'active';
+              if (index === (activeIndex - 1 + images.length) % images.length) position = 'prev';
+              if (index === (activeIndex + 1) % images.length) position = 'next';
+              
+              return (
+                <div key={index} className={`carousel-image ${position}`}>
+                  <img src={image.src} alt={`Event ${index + 1}`} />
+                  <div className="image-overlay">
+                    <h3>{image.title}</h3>
+                  </div>
+                </div>
+              );
+            })}
+            <div className="carousel-dots">
+              {images.map((_, index) => (
+                <div
+                  key={index}
+                  className={`dot ${index === activeIndex ? 'active' : ''}`}
+                  onClick={() => setActiveIndex(index)}
+                />
+              ))}
             </div>
           </div>
         </div>

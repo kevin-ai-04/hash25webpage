@@ -1,4 +1,4 @@
-/* Default Navbar at Bottom of Landing Page */
+/* Default Navbar - Starts at the Bottom */
 .navbar {
     width: 100%;
     padding: 1rem 0;
@@ -10,13 +10,13 @@
     z-index: 1000;
   }
   
-  /* Navbar at Bottom */
+  /* Navbar at Bottom of Section 1 */
   .navbar.bottom {
     position: absolute;
     bottom: 0;
   }
   
-  /* Sticky Navbar at Top */
+  /* Sticky Navbar - Fixed to Top After Section 1 */
   .navbar.sticky {
     position: fixed;
     top: 0;
@@ -40,10 +40,15 @@
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    padding: 0.5rem 1rem;
   }
   
-  /* Hover Effect */
+  /* Gradient Hover Effect */
   .navbar li:hover {
+    background: linear-gradient(to right, #F2994A, #8227F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     transform: scale(1.1);
   }
   
