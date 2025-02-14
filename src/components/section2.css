@@ -1,87 +1,131 @@
-/* Full viewport with a background texture */
+/* Fullscreen layout with background texture */
 .happening-section {
-    min-height: 100vh;
-    background-image: url('/images/texture.jpg'); /* Update with your texture */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  /* Two-column layout */
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    width: 100%;
-  }
-  
-  /* Left Column: Text content */
-  .left-column {
-    text-align: left;
-  }
-  
-  /* Heading: Centered and on a single line */
-  .heading {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 5rem;
+  min-height: 100vh;
+  background-image: url('/images/texture.jpg'); /* Change this to your texture */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+/* Main container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading - Centered and on one line */
+.heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* Adaptive font size */
+  text-align: center;
+  white-space: nowrap; /* Keep on one line */
+  margin-bottom: 3rem;
+}
+
+/* Highlight in heading */
+.highlight {
+  color: #ad52f2;
+}
+
+/* Two-column layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Left Column: Body Text */
+.left-column {
+  text-align: left;
+  max-width: 600px;
+}
+
+/* Blocky font for the body text */
+.description {
+  font-family: 'Press Start 2P', sans-serif; /* Change to any blocky font */
+  font-size: clamp(0.9rem, 2vw, 1.1rem); /* Responsive text */
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Right Column: Image Grid */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Image Rows */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Image Styling */
+.event-image {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.event-image:hover {
+  transform: scale(1.05);
+}
+
+/* Custom positioning for staircase effect */
+.img-1 {
+  transform: translateY(20px);
+}
+.img-2 {
+  transform: translateY(10px);
+}
+.img-3 {
+  transform: translateY(0px);
+}
+.img-4 {
+  transform: translateY(-0px);
+}
+.img-5 {
+  transform: translateY(-10px);
+}
+.img-6 {
+  transform: translateY(-20px);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr; /* Stack text and images */
     text-align: center;
-    white-space: nowrap; /* Keeps text in one line */
-    margin-bottom: 1.5rem;
   }
-  
-  /* Highlight in heading */
-  .highlight {
-    color: #ad52f2;
+  .left-column {
+    max-width: 100%;
   }
-  
-  /* Description: Justified text */
-  .description {
-    font-family: 'GoodTimes', sans-serif;
-    font-size: 1rem;
-    text-align: justify;
-    line-height: 1.6;
-    max-width: 600px;
-  }
-  
-  /* Right Column: Stacked images */
   .right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
   }
-  
-  /* Image Styling */
+  .image-row {
+    flex-wrap: wrap;
+  }
   .event-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 45%;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr; /* Stack text and images */
-      text-align: center;
-    }
-    .right-column {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .event-image {
-      width: 45%;
-    }
+}
+
+@media (max-width: 768px) {
+  .event-image {
+    width: 100%; /* Full width images on mobile */
   }
-  
-  @media (max-width: 480px) {
-    .event-image {
-      width: 100%; /* Full width images on mobile */
-    }
-  }
-  
+}
