@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-
+import Section1 from './components/section1'
 
 function App() {
   return (
     <>
       <div className='Container'>
         <div className='Section 1'>
-          <h1>Section 1</h1>
+
+          <Section1/>
         </div>
         <div className='Section 1'>
           <h1>Section 2</h1>

@@ -1,0 +1,19 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 70vw; /* Adjust as needed */
+  height: auto;
+}
+
+.prize-pool {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
