@@ -1,32 +1,29 @@
 .custom-cursor {
     position: fixed;
-    width: 72px;
-    height: 72px;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 42px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.682); /* Set constant transparency */
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-    z-index: 9999;
-    mix-blend-mode: difference; /* Makes it more visible */
-  }
-  
-  /* Expand cursor on hover */
-  .custom-cursor.hovered {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  
-  /* Hide cursor on mobile */
-  @media (max-width: 768px) {
+    z-index: 9999; /* Keeps visibility */
+}
+
+/* Remove hover effect */
+.custom-cursor.hovered {
+    width: 54px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.3); /* Same as default */
+}
+
+/* Hide cursor on mobile */
+@media (max-width: 768px) {
     .custom-cursor {
-      display: none;
+        display: none;
     }
-  }
-  
-  /* Hide the default cursor */
-body {
-    cursor: none;
-  }
-  
+}
+
+/* Hide the default cursor globally */
+* {
+    cursor: none !important;
+}

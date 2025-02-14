@@ -1,17 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react'; // Import useEffect
+import './App.css';
 
 import CustomCursor from "./components/CustomCursor";
 import Section1 from './components/section1'
 import './fonts.css'; 
+import Navbar from "./components/Navbar";
 import HappeningSection from './components/section2';
+import CursorGlow from './components/CursorGlow';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Simulate a 3-second loading time
+  }, []);
+
   return (
     <>
       
       <CustomCursor />
       <div className='Container'>
+        <Navbar />
         <div className='Section 1'>
 
           <Section1/>
@@ -34,7 +45,7 @@ function App() {
        </div>
 
     </>
-  )
+  );
 }
 
-export default App
+export default App;

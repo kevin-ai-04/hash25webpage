@@ -1,8 +1,8 @@
 .cursor-glow {
     position: fixed;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(255, 100, 255, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(173, 82, 242, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
     border-radius: 50%;
     pointer-events: none;
     filter: blur(80px);
