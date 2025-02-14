@@ -8,6 +8,7 @@ import HappeningSection from './components/section2';
 function App() {
   return (
     <>
+      
       <div className='Container'>
         <Navbar />
         <div className='Section 1'>
