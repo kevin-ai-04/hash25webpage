@@ -4,7 +4,6 @@ import './App.css';
 import CustomCursor from "./components/CustomCursor";
 import Section1 from './components/section1'
 import './fonts.css'; 
-import Navbar from "./components/Navbar";
 import HappeningSection from './components/section2';
 import CursorGlow from './components/CursorGlow';
 
@@ -19,10 +18,9 @@ function App() {
 
   return (
     <>
-      
+      <CursorGlow />
       <CustomCursor />
       <div className='Container'>
-        <Navbar />
         <div className='Section 1'>
 
           <Section1/>
