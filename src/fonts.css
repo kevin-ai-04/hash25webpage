@@ -1,0 +1,26 @@
+/* Example: Loading local fonts from /public/fonts or /src/assets/fonts */
+
+/* Good Times */
+@font-face {
+    font-family: 'GoodTimes';
+    src: url('/public/Good Times Rg.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Orbitron */
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('/public/Orbitron-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Vortax */
+  @font-face {
+    font-family: 'Vortax';
+    src: url('/public/Vortax\ DEMO.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

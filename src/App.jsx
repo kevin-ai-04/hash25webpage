@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Section1 from './components/section1'
+import './fonts.css'; 
+import HappeningSection from './components/section2';
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
           <Section1/>
         </div>
         <div className='Section 1'>
-          <h1>Section 2</h1>
+          <HappeningSection />
         </div>
         <div className='Section 1'>
           <h1>Section 3</h1>
