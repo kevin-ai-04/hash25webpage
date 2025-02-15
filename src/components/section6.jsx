@@ -4,8 +4,8 @@ import './section6.css';
 const Sponsors = () => {
   const sponsors = [
     { 
-      name: 'MBOFTAA',
-      logo: '/sponsors/mboftaa.png',
+      name: 'MBCETAA',
+      logo: '/mbcetaa-logo.png',
       url: 'https://mboftaa.com',
       tier: 'platinum'
     },
