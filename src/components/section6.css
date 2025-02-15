@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3rem;
+
     padding: 2rem;
   }
   
@@ -21,6 +22,7 @@
   .sponsor-logo {
     filter: grayscale(0.3);
     transition: all 0.3s ease;
+
   }
   
   .sponsor-card:hover .sponsor-logo {
