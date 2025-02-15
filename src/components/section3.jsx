@@ -11,12 +11,28 @@ const HashLogo = () => (
     </svg>
   );
 
-const GlowingLogoPage = () => {
+const GlowingLogoPage = ( className, autoRotate) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [hue, setHue] = useState(270);
   const containerRef = useRef(null);
+  const rotationRef = useRef({ x: 0, y: 0.5 });
+    useEffect(() => {
+      if (autoRotate) {
+        const animate = () => {
+          rotationRef.current.x += 0.2;
+          rotationRef.current.y += 0.3;
+          setRotation({
+            x: Math.sin(rotationRef.current.x * Math.PI / 180) * 5,
+            y: Math.sin(rotationRef.current.y * Math.PI / 180) * 5
+          });
+          requestAnimationFrame(animate);
+        };
+        animate();
+      }
+    }, [autoRotate]);
+  
 
-  // Mouse movement handler
+ // Mouse movement handler
   const handleMouseMove = (e) => {
     const rect = containerRef.current.getBoundingClientRect();
     const x = (e.clientY - rect.top - rect.height/2) / 15;

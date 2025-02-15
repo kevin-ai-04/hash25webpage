@@ -1,3 +1,22 @@
+.initial-load {
+  animation: logoEntrance 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform-origin: center;
+}
+
+@keyframes logoEntrance {
+  0% {
+    transform: scale(3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.initial-load .logo-bg,
+.initial-load .logo
+
 /* Prevent horizontal scrolling */
 body, html {
   overflow-x: hidden;
