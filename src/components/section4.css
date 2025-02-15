@@ -1,73 +1,97 @@
+/* Full-page section */
 #section4 {
-  min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 2rem 0; /* Added padding to prevent overflow */
   position: relative;
-  overflow: hidden;
-}
-
-.event-section{
+  background: none;
   display: flex;
-  margin: auto;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
+/* Centered Heading */
+.section-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Vortax', sans-serif;
+  color: #ad52f2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem; /* Adds spacing below heading */
+}
 
+/* Wrapper for events */
 .events-wrapper {
-  width: 100%;
-  max-width: 1400px;
-  margin: 4rem auto;
+  width: 95vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   perspective: 1000px;
+  flex-direction: column;
+  padding-top:20px ;
+  padding-bottom:20px ;
+  
 }
 
+/* Centered container for event cards */
 .events-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* Even spacing for cards */
+  gap: 20px; /* Space between cards */
   position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+  
 }
 
+/* Event card: Fixed size and fully in frame */
 .event-card {
-  width: 100%;
-  height: 250px;
+  width: 480px; /* Fixed width */
+  height: 360px; /* Fixed height */
   border-radius: 20px;
-  background-size: cover;
+  background-size: contain; /* Ensures full image display */
   background-position: center;
-  transform: scale(0.9);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  background-repeat: no-repeat;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, z-index 0.5s ease-in-out;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
 }
 
-/* Stacked card effect */
-.event-card:nth-child(1) { transform: rotate(-6deg); }
-.event-card:nth-child(2) { transform: rotate(-2deg); }
-.event-card:nth-child(3) { transform: rotate(2deg); }
-.event-card:nth-child(4) { transform: rotate(6deg); }
+/* Adjust positioning for a neat layout */
+.event-card:nth-child(odd) { transform: translateX(-10px) rotate(-2deg); }
+.event-card:nth-child(even) { transform: translateX(10px) rotate(2deg); }
 
-/* Hover Effect: Pops up and reveals content */
+/* Hover effect: Stays in place but highlights */
 .event-card:hover {
   transform: scale(1.05) rotate(0deg);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 40px rgba(173, 82, 242, 0.6); /* Purple glow */
+  z-index: 2;
 }
 
-/* Darker overlay fills the card on hover */
+/* FULL transparency overlay now covers the whole card */
 .event-card::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  transition: background 0.4s ease-in-out;
 }
 
 .event-card:hover::before {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8); /* Full hover transparency */
 }
 
-/* Event content is initially hidden */
+/* Event content initially hidden */
 .event-content {
   position: absolute;
   bottom: 10%;
@@ -78,6 +102,7 @@
   transition: opacity 0.4s ease, transform 0.4s ease;
   color: white;
   width: 90%;
+  z-index: 2;
 }
 
 /* On hover, text appears */
@@ -88,35 +113,41 @@
 
 /* Event title */
 .event-title {
-  font-family: 'Cyberverse', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-family: 'Vortax', sans-serif;
+  font-size: 2.5rem;
+  color: #ad52f2;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Time & Description */
 .event-time, .event-description {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* CTA Button */
 .event-cta {
-  background: #ad52f2;
+  background: rgba(173, 82, 242, 0.9);
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: background 0.3s;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .event-cta:hover {
-  background: #8b3bcf;
+  background: rgba(173, 82, 242, 1);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* 📱 Mobile Responsive */
+@media (max-width: 1024px) {
   .events-container {
     flex-direction: column;
     align-items: center;
@@ -124,12 +155,35 @@
   }
 
   .event-card {
-    width: 90%;
-    height: 400px;
+    width: 90vw; /* Adjust width to fit smaller screens */
+    height: 300px; /* Reduce height */
     transform: none !important;
   }
 
   .event-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  .event-card {
+    width: 95%;
+    height: 250px; /* Smaller card height for small screens */
+  }
+
+  .event-title {
+    font-size: 1.8rem;
+  }
+
+  .event-time, .event-description {
+    font-size: 1rem;
+  }
+
+  .event-cta {
+    font-size: 1rem;
   }
 }

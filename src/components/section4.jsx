@@ -7,7 +7,7 @@ const events = [
     time: '10:00 AM - 1:00 PM',
     prize: '₹0K',
     description: 'Idea Presentation. Present your innovative tech ideas to judges in a fast-paced pitch environment.',
-    cta: 'REGISTER NOW',
+    cta: 'START THINKING',
     bgImage: '/GreenPitch.png',
   },
   {
@@ -23,7 +23,7 @@ const events = [
     time: '10:00 AM - 1:00 PM',
     prize: '0K',
     description: '3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!',
-    cta: 'START HACKING',
+    cta: 'START KICKING',
     bgImage: '/futsal.png',
   },
   {
@@ -31,7 +31,7 @@ const events = [
     time: '10:00 AM - 1:00 PM',
     prize: '₹0K',
     description: 'Coding challenge. Replicate a web page relying purely on logic and memory.',
-    cta: 'BUILD NOW',
+    cta: 'CODE NOW',
     bgImage: '/blind-code.png',
   }
 ];
