@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './section2.css';
 
 const images = [
-  { src: 'image1.jpg', title: 'Coding Challenge' },
-  { src: 'image2.jpg', title: 'Robotics Workshop' },
-  { src: 'image3.jpg', title: 'Hackathon' },
-  { src: 'image4.jpg', title: 'Tech Talks' },
-  { src: 'image5.jpg', title: 'Project Expo' },
-  { src: 'image6.jpg', title: 'Innovation Showcase' }
+  { src: 'hash-img1.png'},
+  { src: 'hash-img2.png'},
+  { src: 'hash-img3.png'},
+  { src: 'hash-img4.png'},
+  { src: 'hash-img1.png'},
+  { src: 'hash-img1.png'}
 ];
 
 const HappeningSection = () => {
@@ -50,9 +50,6 @@ const HappeningSection = () => {
               return (
                 <div key={index} className={`carousel-image ${position}`}>
                   <img src={image.src} alt={`Event ${index + 1}`} />
-                  <div className="image-overlay">
-                    <h3>{image.title}</h3>
-                  </div>
                 </div>
               );
             })}

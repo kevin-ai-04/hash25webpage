@@ -1,7 +1,6 @@
 
 /* Fullscreen layout with a professional gradient background */
 .happening-section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
