@@ -9,14 +9,13 @@ import Section3 from './components/section3';
 import Section4 from './components/section4';
 import Section5 from './components/section5';
 import Section6 from './components/section6';
-
+import Footer from "./components/Footer";
 function App() {
-  const [showLoader, setShowLoader] = useState(true);
-  const [showSection1, setShowSection1] = useState(false);
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
-  const section1Ref = useRef(null);
-
+    const [showLoader, setShowLoader] = useState(true);
+    const [showSection1, setShowSection1] = useState(false);
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+    const [scrollY, setScrollY] = useState(0);
+    const section1Ref = useRef(null);
   useEffect(() => {
     // Check session storage for first load
     const firstLoad = sessionStorage.getItem('firstLoad');
@@ -61,7 +60,6 @@ function App() {
             <Section3 autoRotate={true} />
           </div>
         )}
-
         {/* Main Content */}
         {!showLoader && (
           <>
@@ -99,6 +97,9 @@ function App() {
             </div>
             <div className='Section6' style={{ position: 'relative', zIndex: 2 }}>
               <Section6 />
+            </div>
+            <div className='Footer' style={{ position: 'relative', zIndex: 2 }}>
+              <Footer />
             </div>
           </>
         )}
