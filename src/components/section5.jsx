@@ -48,7 +48,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <section className="happening-section" id="timeline">
+    <section className="timeline-section" id="timeline">
       <div className="container">
         <h2 className="heading">
           EVENT <span className="highlight">TIMELINE</span>

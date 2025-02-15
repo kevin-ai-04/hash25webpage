@@ -19,7 +19,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <section className="happening-section" id="sponsors">
+    <section className="sponsor-section" id="sponsors">
       <div className="container">
         <h2 className="heading">
           OUR <span className="highlight">SPONSORS</span>

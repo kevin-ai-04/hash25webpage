@@ -28,8 +28,8 @@
 }
 
 .event-card {
-  width: 22%;
-  height: 450px;
+  width: 100%;
+  height: 250px;
   border-radius: 20px;
   background-size: cover;
   background-position: center;
