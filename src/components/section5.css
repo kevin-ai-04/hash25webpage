@@ -1,92 +1,44 @@
+/* ======= TIMELINE GRID ======= */
 .timeline-grid {
   display: grid;
   gap: 2rem;
   position: relative;
 }
 
+/* ======= TIMELINE CARD BASE STYLES ======= */
 .timeline-card {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 2rem;
   border: 1px solid rgba(173, 82, 242, 0.3);
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s forwards;
-}
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.event-icon {
-  color: #ad52f2;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.timeline-section {
-  padding: 4rem 2rem;
-  min-height: 100vh;
-}
-
-.timeline-header {
-  text-align: center;
-  font-size: 3.5rem;
-  color: white;
-  margin-bottom: 4rem;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.magic-text {
-  background: linear-gradient(45deg, #ad52f2, #7d3cff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: hue-rotate 5s infinite;
-}
-
-.timeline-container {
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  width: 4px;
-  background: rgba(255,255,255,0.1);
-  height: 100%;
-  transform: translateX(-50%);
+/* ======= INITIAL OFFSETS FOR ALTERNATING SIDES ======= */
+.timeline-card.left {
+  transform: translateX(-50px) translateY(30px);
+}
+.timeline-card.right {
+  transform: translateX(50px) translateY(30px);
 }
 
-.timeline-item {
-  width: calc(50% - 40px);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.timeline-item.visible {
+/* ======= VISIBLE STATE (when .visible class is added) ======= */
+.timeline-card.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0) translateY(0);
 }
 
-.timeline-item.left { margin-right: auto; }
-.timeline-item.right { margin-left: auto; }
-
-.timeline-content {
-  position: relative;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 2rem;
-  margin: 2rem 0;
-  border: 1px solid var(--accent-color);
-  box-shadow: 0 0 15px var(--accent-color);
+/* ======= HOVER EFFECT (card scales up slightly) ======= */
+.timeline-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(173, 82, 242, 0.6);
 }
 
+/* ======= EVENT ICON (with subtle pulse animation) ======= */
 .event-icon {
   position: absolute;
   font-size: 2rem;
@@ -99,6 +51,70 @@
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+/* ======= TIMELINE SECTION & HEADER ======= */
+.timeline-section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  /* No background added, as per your request */
+}
+
+.timeline-header {
+  text-align: center;
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 4rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* ======= MAGIC TEXT (highlight effect) ======= */
+.magic-text {
+  background: linear-gradient(45deg, #ad52f2, #7d3cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hue-rotate 5s infinite;
+}
+
+@keyframes hue-rotate {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+/* ======= TIMELINE CONTAINER & CENTER LINE ======= */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+/* ======= TIMELINE CARD CONTENT ======= */
+.timeline-content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-color);
 }
 
 .event-time {
@@ -119,6 +135,7 @@
   line-height: 1.6;
 }
 
+/* ======= CONNECTOR LINES ======= */
 .event-connector {
   position: absolute;
   width: 30px;
@@ -127,28 +144,33 @@
   top: 50%;
 }
 
-.timeline-item.left .event-connector { right: -30px; }
-.timeline-item.right .event-connector { left: -30px; }
-
-@keyframes hue-rotate {
-  from { filter: hue-rotate(0deg); }
-  to { filter: hue-rotate(360deg); }
+.timeline-card.left .event-connector {
+  right: -30px;
 }
 
+.timeline-card.right .event-connector {
+  left: -30px;
+}
+
+/* ======= RESPONSIVE STYLES ======= */
 @media (max-width: 768px) {
-  .timeline-item {
+  .timeline-card {
     width: 100%;
     margin: 0 !important;
   }
   
-  .timeline-line { left: 20px; }
+  .timeline-line {
+    left: 20px;
+  }
   
   .event-icon {
     left: -25px;
     transform: none;
   }
   
-  .event-connector { display: none; }
+  .event-connector {
+    display: none;
+  }
   
   .timeline-content {
     margin-left: 40px;

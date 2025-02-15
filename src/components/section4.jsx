@@ -4,34 +4,34 @@ import './section4.css';
 const events = [
   {
     title: 'THE GREEN PITCH',
-    time: '10:00 AM - 1:00 PM',
+    time: '10:00 AM - 2:00 PM',
     prize: '₹0K',
     description: 'Idea Presentation. Present your innovative tech ideas to judges in a fast-paced pitch environment.',
-    cta: 'START THINKING',
+    cta: 'REGISTER',
     bgImage: '/GreenPitch.png',
   },
   {
     title: 'CAPTURE THE FLAG',
-    time: '10:00 AM - 1:00 PM',
+    time: '10:00 AM - 2:00 PM',
     prize: '₹0K',
     description: 'Cybersecurity Puzzle. Solve cybersecurity challenges and find hidden flags.',
-    cta: 'JOIN BATTLE',
+    cta: 'REGISTER',
     bgImage: '/CTF.png',
   },
   {
     title: 'FUTSAL',
-    time: '10:00 AM - 1:00 PM',
+    time: '10:00 AM - 2:00 PM',
     prize: '0K',
     description: '3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!',
-    cta: 'START KICKING',
+    cta: 'REGISTER',
     bgImage: '/futsal.png',
   },
   {
     title: 'BLIND CODE',
-    time: '10:00 AM - 1:00 PM',
+    time: '10:00 AM - 2:00 PM',
     prize: '₹0K',
     description: 'Coding challenge. Replicate a web page relying purely on logic and memory.',
-    cta: 'CODE NOW',
+    cta: 'REGISTER',
     bgImage: '/blind-code.png',
   }
 ];
