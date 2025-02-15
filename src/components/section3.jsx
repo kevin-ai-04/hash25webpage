@@ -41,32 +41,17 @@ const GlowingLogoPage = ( className, autoRotate) => {
     setHue((prev) => (prev + 0.2) % 360);
   };
 
-  // Create particles
-  const createParticles = () => {
-    return Array.from({ length: 50 }).map((_, i) => (
-      <div 
-        key={i}
-        className="particle"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          animationDelay: `${i * 0.1}s`
-        }}
-      />
-    ));
-  };
 
   return (
     <section 
-      className="logo-page"
+      className="load-logo-page"
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setRotation({ x: 0, y: 0 })}
     >
-      {createParticles()}
       
       <div 
-        className="logo-container"
+        className="load-logo-container"
         style={{
           transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
           filter: `hue-rotate(${hue}deg)`

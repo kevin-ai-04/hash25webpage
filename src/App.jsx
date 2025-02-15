@@ -6,6 +6,8 @@ import Section1 from './components/section1'
 import './fonts.css'; 
 import HappeningSection from './components/section2';
 import CursorGlow from './components/CursorGlow';
+
+
 import Section3 from './components/section3'
 import Section4 from './components/section4'
 import Section5 from './components/section5'

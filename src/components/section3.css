@@ -1,5 +1,5 @@
 /* GlowingLogoPage.css */
-.logo-page {
+.load-logo-page {
     min-height: 100vh;
     width: 100vw;
     background: radial-gradient(circle at center, #0a0a2e, #000);
@@ -11,8 +11,8 @@
     overflow: hidden;
   }
   
-  .logo-container {
-    position: relative;
+  .load-logo-container {
+    position: fixed;
     transform-style: preserve-3d;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     width: 90%;
@@ -21,7 +21,7 @@
   }
   
   .logo-3d {
-    width: 100%;
+    width: 50%;
     height: auto;
     position: relative;
     z-index: 3;
@@ -49,39 +49,6 @@
     50% { transform: scale(1.2); opacity: 0.6; }
   }
   
-  /* Particles */
-  .particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #fff;
-    border-radius: 50%;
-    animation: particle-float 20s infinite linear;
-    opacity: 0.3;
-  }
-  
-  @keyframes particle-float {
-    from { transform: translateY(100vh); }
-    to { transform: translateY(-100vh); }
-  }
-  
-  /* Light Rays */
-  .light-rays {
-    position: absolute;
-    inset: -50%;
-    background: repeating-conic-gradient(
-      from 0deg,
-      transparent 0deg 10deg,
-      rgba(255,255,255,0.1) 10deg 20deg
-    );
-    animation: rotate-rays 60s infinite linear;
-    opacity: 0.1;
-    mix-blend-mode: screen;
-  }
-  
-  @keyframes rotate-rays {
-    to { transform: rotate(360deg); }
-  }
   
   /* CRT Scanline Effect */
   .scanline {
@@ -131,6 +98,6 @@
     }
     
     .particle {
-      animation-duration: 10s;
+      animation-duration: 30s;
     }
   }
