@@ -1,4 +1,3 @@
-
 @keyframes logoEntrance {
   0% {
     transform: scale(3);
@@ -15,13 +14,12 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
 
 /* LOGO CONTAINER */
 .logo-container {
@@ -58,6 +56,8 @@
   z-index: 1;
   transform: translate(-12%, -3%);
   transition: transform 0.8s ease-in-out;
+  /* New: animate from extremely zoomed-in to normal size */
+  animation: logoEntrance 1s ease-out forwards;
 }
 
 /* PRIZE POOL TEXT */
@@ -74,9 +74,8 @@
 /* RESPONSIVENESS */
 @media screen and (max-width: 768px) {
   .marquee-track {
-    font-size: 8vw; /* Bigger text for small screens */
+    font-size: 8vw;
   }
-
   .logo-container {
     width: 50vw;
   }
@@ -87,11 +86,9 @@
   .logo-container:hover .logo {
     transform: translate(-12%, -3%) scale(1.12);
   }
-
   .logo-container:hover .logo-bg {
     transform: translate(-50%, -4%) scale(1.05);
   }
-
   .logo {
     cursor: pointer;
   }

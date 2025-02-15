@@ -63,3 +63,13 @@
   position: relative;
   z-index: 2; /* Ensure these sections appear above Section 1 */
 }
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

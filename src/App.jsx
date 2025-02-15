@@ -10,12 +10,15 @@ import Section4 from './components/section4';
 import Section5 from './components/section5';
 import Section6 from './components/section6';
 import Footer from "./components/Footer";
+
 function App() {
-    const [showLoader, setShowLoader] = useState(true);
-    const [showSection1, setShowSection1] = useState(false);
-    const [isFirstLoad, setIsFirstLoad] = useState(true);
-    const [scrollY, setScrollY] = useState(0);
-    const section1Ref = useRef(null);
+  const [showLoader, setShowLoader] = useState(true);
+  const [loaderFadeOut, setLoaderFadeOut] = useState(false);
+  const [showSection1, setShowSection1] = useState(false);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
+  const section1Ref = useRef(null);
+
   useEffect(() => {
     // Check session storage for first load
     const firstLoad = sessionStorage.getItem('firstLoad');
@@ -26,10 +29,13 @@ function App() {
       setIsFirstLoad(false);
     }
 
-    // Loader timeout (3 seconds)
+    // Loader timeout (3 seconds) then fade out and remove loader
     const timer = setTimeout(() => {
-      setShowLoader(false);
-      setShowSection1(true);
+      setLoaderFadeOut(true);
+      setTimeout(() => {
+        setShowLoader(false);
+        setShowSection1(true);
+      }, 500); // 0.5 second fade-out duration
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -44,10 +50,9 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Calculate blur and scale based on scroll position
-  const blurAmount = Math.min(scrollY / 5, 10); // Adjust divisor for sensitivity
-  const scaleAmount = Math.max(1 - scrollY / 100, 0.8); // Adjust divisor for sensitivity
-  const opacityAmount = Math.max(1 - scrollY / 500, 0); // Adjust divisor for sensitivity
+  const blurAmount = Math.min(scrollY / 5, 10);
+  const scaleAmount = Math.max(1 - scrollY / 100, 0.8);
+  const opacityAmount = Math.max(1 - scrollY / 500, 0);
 
   return (
     <>
@@ -56,7 +61,10 @@ function App() {
       <div className='Container'>
         {/* Loader Section */}
         {showLoader && (
-          <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: 9999 }}>
+          <div 
+            className={`loader-container ${loaderFadeOut ? 'fade-out' : ''}`}
+            style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: 9999 }}
+          >
             <Section3 autoRotate={true} />
           </div>
         )}
@@ -69,22 +77,23 @@ function App() {
               style={{
                 filter: `blur(${blurAmount}px)`,
                 transform: `scale(${scaleAmount})`,
-                opacity: opacityAmount, // Adjust transparency on scroll
-                position: 'fixed', // Keep Section 1 in place
+                opacity: opacityAmount,
+                position: 'fixed',
                 top: 0,
                 left: 0,
                 width: '100%',
                 height: '100vh',
-                zIndex: 1, // Section 1 stays below Section 2
+                zIndex: 1,
               }}
             >
               {showSection1 && <Section1 isFirstLoad={isFirstLoad} />}
             </div>
             <div
-              className='Section2'
+              className='Section2 fade-in'
               style={{
                 position: 'relative',
-                zIndex: 2, // Section 2 appears above Section 1
+                zIndex: 2,
+                animation: 'slideUp 1s ease'
               }}
             >
               <HappeningSection />
