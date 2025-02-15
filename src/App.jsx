@@ -2,6 +2,8 @@
   import './App.css';
   import './fonts.css';
 
+  import Footer from "./components/Footer";
+
   import CustomCursor from "./components/CustomCursor";
   import Section1 from './components/section1';
   import './fonts.css'; 
@@ -92,6 +94,9 @@
           </div>
           <div className='Section6' style={{ position: 'relative', zIndex: 2 }}>
             <Section6 />
+          </div>
+          <div>
+            <Footer/>
           </div>
         </div>
       </>
