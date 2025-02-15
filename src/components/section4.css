@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.event-section{
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+
 .events-wrapper {
   width: 100%;
   max-width: 1400px;

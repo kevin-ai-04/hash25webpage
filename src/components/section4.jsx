@@ -38,7 +38,7 @@ const events = [
 
 const EventSection = () => {
   return (
-    <section className="happening-section" id="section4">
+    <section className="event-section" id="section4">
       <h2 className="heading">
         EVENT <span className="highlight">SPOTLIGHT</span>
       </h2>
