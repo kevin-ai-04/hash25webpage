@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import './fonts.css';
 
-import CustomCursor from './components/CustomCursor';
+import CustomCursor from "./components/CustomCursor";
 import Section1 from './components/section1';
+import './fonts.css'; 
 import HappeningSection from './components/section2';
 import CursorGlow from './components/CursorGlow';
 import Section3 from './components/section3';
