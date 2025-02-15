@@ -35,30 +35,28 @@ const events = [
     bgImage: '/blind-code.png',
   }
 ];
-
 const EventSection = () => {
   return (
     <section className="event-section" id="section4">
       <h2 className="heading">
         EVENT <span className="highlight">SPOTLIGHT</span>
       </h2>
-      <div className="events-wrapper">
-        <div className="events-container">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="event-card"
-              style={{ backgroundImage: `url(${event.bgImage})` }}
-            >
-              <div className="event-content">
-                <h3 className="event-title">{event.title}</h3>
-                <div className="event-time">{event.time}</div>
-                <p className="event-description">{event.description}</p>
-                <button className="event-cta">{event.cta}</button>
-              </div>
+      
+      <div className="events-container">
+        {events.map((event, index) => (
+          <div
+            key={index}
+            className="event-card"
+            style={{ backgroundImage: `url(${event.bgImage})` }}
+          >
+            <div className="event-content">
+              <h3 className="event-title">{event.title}</h3>
+              <div className="event-time">{event.time}</div>
+              <p className="event-description">{event.description}</p>
+              <button className="event-cta">{event.cta}</button>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
