@@ -1,147 +1,128 @@
 #section4 {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
 
-    min-height: 100vh;
-    padding: 4rem 2rem;
-    position: relative;
-    }
-    
-    .events-wrapper {
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    }
-    
-    .events-container {
-    display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    
-    .event-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+.events-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 4rem auto;
+  perspective: 1000px;
+}
+
+.events-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Even spacing for cards */
+  position: relative;
+}
+
+.event-card {
+  width: 22%;
+  height: 450px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transform: scale(0.9);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stacked card effect */
+.event-card:nth-child(1) { transform: rotate(-6deg); }
+.event-card:nth-child(2) { transform: rotate(-2deg); }
+.event-card:nth-child(3) { transform: rotate(2deg); }
+.event-card:nth-child(4) { transform: rotate(6deg); }
+
+/* Hover Effect: Pops up and reveals content */
+.event-card:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Darker overlay fills the card on hover */
+.event-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease-in-out;
+}
+
+.event-card:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Event content is initially hidden */
+.event-content {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  color: white;
+  width: 90%;
+}
+
+/* On hover, text appears */
+.event-card:hover .event-content {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Event title */
+.event-title {
+  font-family: 'Cyberverse', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Time & Description */
+.event-time, .event-description {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Button */
+.event-cta {
+  background: #ad52f2;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.event-cta:hover {
+  background: #8b3bcf;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
     align-items: center;
-    }
-    
-    .event-content {
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 3rem;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid rgba(173, 82, 242, 0.3);
-    margin: 0 1rem;
-    }
-    
-    .event-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: #ad52f2;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    }
-    
-    .event-time {
-    font-size: 1.3rem;
-    color: #ccc;
-    margin-bottom: 0.5rem;
-    }
-    
-    .event-prize {
-    font-size: 1.6rem;
-    color: #fff;
-    margin-bottom: 2rem;
-    }
-    
-    .event-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #e6e6e6;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    }
-    
-    .event-cta {
-    background: rgba(173, 82, 242, 0.3);
-    border: 2px solid #ad52f2;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    }
-    
-    .event-cta:hover {
-    background: rgba(173, 82, 242, 0.5);
-    transform: translateY(-3px);
-    }
-    
-    #section4 .section4-nav {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 100;
-    }
-    
-    .nav-button {
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    }
-    
-    .nav-button:hover {
-    background: #ad52f2;
-    transform: scale(1.1);
-    }
-    
-    .nav-dots {
-    display: flex;
     gap: 1rem;
-    }
-    
-    .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    }
-    
-    .dot.active {
-    background: #ad52f2;
-    transform: scale(1.3);
-    }
-    
-    @media (max-width: 768px) {
-    .event-content {
-    padding: 2rem;
-    margin: 0 0.5rem;
-    }
-    .event-title {
-        font-size: 2rem;
-      }
-      
-      .event-description {
-        font-size: 1rem;
-      }
-      
-      #section4 .section4-nav {
-        bottom: 1rem;
-      }
-    }
+  }
+
+  .event-card {
+    width: 90%;
+    height: 400px;
+    transform: none !important;
+  }
+
+  .event-title {
+    font-size: 1.5rem;
+  }
+}
