@@ -10,9 +10,27 @@ const Sponsors = () => {
       tier: 'platinum'
     },
     {
-      name: 'TechCorp',
-      logo: '/sponsors/techcorp.png',
-      url: 'https://techcorp.com',
+      name: 'UST',
+      logo: '/ust.png',
+      url: 'https://www.ust.com',
+      tier: 'platinum'
+    },
+    {
+      name: 'NAM',
+      logo: '/nam.jpeg',
+      url: 'https://www.nam.kerala.gov.in',
+      tier: 'platinum'
+    },
+    {
+      name: 'ETHIndia',
+      logo: '/ethindia.svg',
+      url: 'https://ethindia2024.devfolio.co',
+      tier: 'platinum'
+    },
+    {
+      name: 'ibsplc',
+      logo: '/ibsplc.jpeg',
+      url: 'https://www.ibsplc.com',
       tier: 'gold'
     },
     // Add more sponsors
