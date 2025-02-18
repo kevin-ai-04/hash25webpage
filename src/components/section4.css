@@ -40,6 +40,8 @@
   overflow: hidden;
   transition: transform 0.4s ease-in-out;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 1;
+  transition: transform 0.4s ease-in-out, z-index 0.4s;
 }
 
 /* Background blur effect - initially hidden */
@@ -59,6 +61,7 @@
 /* HOVER EFFECTS - expand, show blur and text */
 .event-card:hover {
   transform: scale(1.15); /* Expand the card */
+  z-index: 10;
 }
 
 .event-card:hover::before {
