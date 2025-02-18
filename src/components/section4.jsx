@@ -5,7 +5,7 @@ const events = [
   {
     title: "THE GREEN PITCH",
     time: "10:00 AM - 2:00 PM",
-    prize: "₹0K",
+    prize: "₹7K",
     description:
       "Idea Presentation. Present your innovative tech ideas to judges in a fast-paced pitch environment.",
     cta: "REGISTER",
@@ -15,7 +15,7 @@ const events = [
   {
     title: "CAPTURE THE FLAG",
     time: "10:00 AM - 2:00 PM",
-    prize: "₹0K",
+    prize: "₹8K",
     description:
       "Cybersecurity Puzzle. Solve cybersecurity challenges and find hidden flags.",
     cta: "REGISTER",
@@ -25,7 +25,7 @@ const events = [
   {
     title: "FUTSAL",
     time: "10:00 AM - 2:00 PM",
-    prize: "0K",
+    prize: "₹2.5K",
     description:
       "3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!",
     cta: "REGISTER",
@@ -35,7 +35,7 @@ const events = [
   {
     title: "BLIND CODE",
     time: "10:00 AM - 2:00 PM",
-    prize: "₹0K",
+    prize: "₹7K",
     description:
       "Coding challenge. Replicate a web page relying purely on logic and memory.",
     cta: "REGISTER",
