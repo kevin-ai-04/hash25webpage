@@ -56,7 +56,9 @@ const GlowingLogoPage = ({ autoRotate }) => {
       >
         <HashLogo />
         <div className="glow-layer"></div>
+        {/* Removed light-rays element if causing texture issues */}
       </div>
+      {/* Removed scanline element for a cleaner look */}
     </section>
   );
 };

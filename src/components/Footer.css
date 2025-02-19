@@ -1,105 +1,121 @@
-/* Footer Background & Layout */
+/* 
+  The negative margin trick:
+  - left: 50%; margin-left: -50vw; width: 100vw;
+  makes the background span the entire browser width.
+*/
 .footer {
-    width: 100%;
-    max-width: 1224px;
-    background: linear-gradient(to right, #9c27b0, #ff9800); /* Adjust colors */
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative; /* Ensure it’s part of normal flow */
-  }
-  
-  
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto; /* Centers the content */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures left and right sections align properly */
-    width: 100%; /* Ensures it spans full width */
-    padding: 0 20px;
-  }
-  
-  
-  /* Left Side - Contact */
-  /* .footer-left {
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
 
-  } */
-  
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    height: 30px;
+  /* Gradient background */
+  background: linear-gradient(to right, #9c27b0, #ff9800);
+  color: white;
+
+  /* Spacing & layout */
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+  .footer-container is centered with max-width: 1200px
+  so the content is nicely aligned, not pushed to the left. 
+*/
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* side padding for content */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Side - Contact */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-logo-img {
+  width: 50px;
+  height: auto;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.contact-text {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.email {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Right Side - Social Icons */
+.footer-right {
+  display: flex;
+  gap: 15px;
+  margin-top: 0;
+}
+.social-icon {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.social-icon:hover {
+  color: #ddd;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  width: 100%;
+  background: #4b2372;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+.hash-text {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
+  .footer-left {
+    margin-bottom: 20px;
+  }
+
+  .hash-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-logo-img {
+    width: 40px;
+  }
   .contact-text {
     font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
   }
-  
   .email {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
+    font-size: 16px;
   }
-
-  .email-link {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .email-link:hover {
-    color: #ddd;
-    text-decoration: underline;
-  }
-  
-  /* Right Side - Social Icons */
-  .footer-right {
-    display: flex;
-    gap: 20px;
-  }
-  
-  
-  .social-icon {
-    color: white;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .social-icon:hover {
-    color: #ddd;
-  }
-  
-  /* Bottom Section */
-  .footer-bottom {
-    width: 100%;
-    background: #4b2372; /* Darker purple for contrast */
-    padding: 10px 0;
-    margin-top: 15px;
-  }
-  
   .hash-text {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 18px;
   }
-  
-  
-  /* Responsive Design */
-  @media (min-width: 768px) {
-    .footer-container {
-      flex-direction: row;
-      text-align: left;
-    }
-  
-    .footer-left {
-      text-align: left;
-    }
-  }
-  
+}

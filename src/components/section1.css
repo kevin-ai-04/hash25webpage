@@ -93,3 +93,17 @@
     cursor: pointer;
   }
 }
+@media (max-width: 768px) {
+  .load-logo-container {
+      max-width: 90vw;
+      width: 90%;
+      height: auto;
+  }
+  .logo-3d {
+      width: 50%; /* Even smaller for phone screens */
+  }
+  .glow-layer {
+      width: 250%;
+      height: 250%;
+  }
+}

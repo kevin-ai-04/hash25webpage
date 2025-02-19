@@ -33,16 +33,14 @@ const Sponsors = () => {
       url: 'https://www.ibsplc.com',
       tier: 'gold'
     },
-    // Add more sponsors
   ];
 
   return (
-    <section className="sponsor-section" id="sponsors">
-      <div className="container">
-        <h2 className="heading">
-          OUR <span className="highlight">SPONSORS</span>
-        </h2>
-        
+    <section className="sponsors-section" id="sponsors">
+      <h2 className="sponsors-title">
+        OUR <span className="highlight">SPONSORS</span>
+      </h2>
+      <div className="sponsors-container">
         <div className="sponsors-grid">
           {sponsors.map((sponsor, index) => (
             <a
@@ -55,7 +53,7 @@ const Sponsors = () => {
                 alt={sponsor.name}
                 className="sponsor-logo"
               />
-              <div className="sponsor-hover"></div>
+              <div className="hover-glow"></div>
             </a>
           ))}
         </div>
@@ -63,4 +61,5 @@ const Sponsors = () => {
     </section>
   );
 };
+
 export default Sponsors;

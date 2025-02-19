@@ -16,9 +16,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Add some side padding on mobile */
+  padding: 0 1rem;
 }
 
-/* Heading - Centered, one line, adaptive size */
+/* Heading - Centered */
 .heading {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -28,7 +30,6 @@
   position: relative;
 }
 
-/* Add to heading styles */
 .heading::after {
   content: "✨";
   position: absolute;
@@ -43,7 +44,6 @@
   50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
 }
 
-/* Highlight in heading */
 .highlight {
   color: #ad52f2;
   display: inline-block;
@@ -58,7 +58,7 @@
 .image-carousel {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px; /* Smaller max width than before */
   aspect-ratio: 16/9;
   margin: 0 auto;
   cursor: grab;
@@ -69,18 +69,18 @@
   cursor: grabbing;
 }
 
-/* Carousel Image */
+/* Carousel Image Container */
 .carousel-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 15px;
   opacity: 0;
   transition: opacity 1s ease-in-out, transform 0.5s ease;
   transform: scale(0.95);
 }
 
+/* Active and adjacent images */
 .carousel-image.active {
   opacity: 1;
   transform: scale(1);
@@ -122,6 +122,13 @@
 .next-button { right: 10px; }
 
 
+/* Ensure inner images fill the container uniformly */
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .content {
@@ -152,14 +159,14 @@
 /* Enhanced Description Animation */
 .description {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* Larger text */
   text-align: justify;
   line-height: 1.6;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease forwards;
+  margin-bottom: 2rem; /* Some spacing below the text */
 }
-
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -207,4 +214,16 @@
 
 .carousel-image:hover .image-overlay {
   opacity: 1;
+}
+@media (max-width: 768px) {
+  .description {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .image-carousel {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 0;
+  }
 }

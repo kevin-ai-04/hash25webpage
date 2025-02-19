@@ -61,13 +61,10 @@ const EventSection = () => {
               <h3 className="event-title">{event.title}</h3>
               <div className="event-time">{event.time}</div>
               <p className="event-description">{event.description}</p>
-              <a
-                href={event.link}
-                className="event-cta"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {event.cta}
+              <a href={event.link} className="event-cta-link" target="_blank" rel="noopener noreferrer">
+                <button className="event-cta">
+                  {event.cta}
+                </button>
               </a>
             </div>
           </div>

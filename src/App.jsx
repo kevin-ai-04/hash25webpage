@@ -20,7 +20,6 @@ function App() {
   const section1Ref = useRef(null);
 
   useEffect(() => {
-    // Check session storage for first load
     const firstLoad = sessionStorage.getItem('firstLoad');
     if (!firstLoad) {
       sessionStorage.setItem('firstLoad', 'true');
@@ -28,8 +27,6 @@ function App() {
     } else {
       setIsFirstLoad(false);
     }
-
-    // Loader timeout (3 seconds) then fade out and remove loader
     const timer = setTimeout(() => {
       setLoaderFadeOut(true);
       setTimeout(() => {
@@ -37,7 +34,6 @@ function App() {
         setShowSection1(true);
       }, 500); // 0.5 second fade-out duration
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -45,7 +41,6 @@ function App() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -59,7 +54,6 @@ function App() {
       <CursorGlow />
       <CustomCursor />
       <div className='Container'>
-        {/* Loader Section */}
         {showLoader && (
           <div 
             className={`loader-container ${loaderFadeOut ? 'fade-out' : ''}`}
@@ -68,7 +62,6 @@ function App() {
             <Section3 autoRotate={true} />
           </div>
         )}
-        {/* Main Content */}
         {!showLoader && (
           <>
             <div
