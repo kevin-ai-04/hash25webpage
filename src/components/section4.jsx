@@ -42,6 +42,26 @@ const events = [
     bgImage: "/blind-code.png",
     link: "https://qr.codes/zmfZIW",
   },
+  {
+    title: "IPL Auction",
+    time: "10:00 AM",
+    prize: "₹7000",
+    description:
+      "Think Fast. Bid Smart. Rule the Auction!",
+    cta: "REGISTER",
+    bgImage: "/IPL_Auction.png",
+    link: "https://qr.link/jeEy3n",
+  },
+  {
+    title: "DEFINE",
+    time: "9:45 AM - 1:00 PM",
+    prize: "₹2500",
+    description:
+      "Transforming Tomorrow, Today",
+    cta: "REGISTER",
+    bgImage: "/define.png",
+    link: "https://define25-mu.vercel.app/",
+  },
 ];
 const EventSection = () => {
   return (
