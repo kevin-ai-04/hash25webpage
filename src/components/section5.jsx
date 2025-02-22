@@ -10,27 +10,27 @@ const Timeline = () => {
       icon: '🎉',
       color: '#FF6B6B'
     },
-    {
-        time: '9:30 AM',
-        title: 'Inaugration',
-        description: 'Kickoff ceremony with keynote speakers',
-        icon: '🎉',
-        color: '#FF6B6B'
-      },
-      {
-        time: '9:30 AM',
-        title: 'Inaugration',
-        description: 'Kickoff ceremony with keynote speakers',
-        icon: '🎉',
-        color: '#FF6B6B'
-      },
-      {
-        time: '9:30 AM',
-        title: 'Inaugration',
-        description: 'Kickoff ceremony with keynote speakers',
-        icon: '🎉',
-        color: '#FF6B6B'
-      }
+    // {
+    //     time: '9:30 AM',
+    //     title: 'Inaugration',
+    //     description: 'Kickoff ceremony with keynote speakers',
+    //     icon: '🎉',
+    //     color: '#FF6B6B'
+    //   },
+    //   {
+    //     time: '9:30 AM',
+    //     title: 'Inaugration',
+    //     description: 'Kickoff ceremony with keynote speakers',
+    //     icon: '🎉',
+    //     color: '#FF6B6B'
+    //   },
+    //   {
+    //     time: '9:30 AM',
+    //     title: 'Inaugration',
+    //     description: 'Kickoff ceremony with keynote speakers',
+    //     icon: '🎉',
+    //     color: '#FF6B6B'
+    //   }
   ];
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const Timeline = () => {
             >
               <div className="timeline-content">
                 <div className="event-icon">⏳</div>
-                <h3 className="event-title">{event.title}</h3>
+                <h3 className="timeline-title">{event.title}</h3>
                 <div className="event-time">{event.time}</div>
                 <p className="description">{event.description}</p>
               </div>
