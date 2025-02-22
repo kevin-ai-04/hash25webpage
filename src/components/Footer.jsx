@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         {/* Left Side - Contact with HASH logo */}
-        <div className="footer-left">
+        {/* <div className="footer-left">
           <div className="footer-logo">
             <img src="/logo.png" alt="Logo" className="logo" />
             <p className="contact-text">Contact Us</p>
@@ -15,16 +15,23 @@ export default function Footer() {
           <p className="email">
             <a href="mailto:hash@mbcet.ac.in" className="email-link">hash@mbcet.ac.in</a>
           </p>
-        </div>
+        </div> */}
         {/* Right Side - Social Icons */}
-        <div className="footer-right">
+        {/* <div className="footer-right">
           <a href="https://www.instagram.com/hash.mbcet/" className="social-icon"><Instagram size={24} /></a>
           <a href="mailto:hash@mbcet.ac.in" className="social-icon"><Mail size={24} /></a>
+        </div> */}
+        <div className="footer-body">
+          <p>Contact Us</p>
+          <div className="footer-icons">
+          <a href="https://www.instagram.com/hash.mbcet/" className="social-icon"><Instagram size={24} /></a>
+          <a href="mailto:hash@mbcet.ac.in" className="social-icon"><Mail size={24} /></a>
+          </div>
         </div>
       </div>
       {/* Bottom Section */}
       <div className="footer-bottom">
-        <p className="hash-text">HASH2025</p>
+        <img src="/hash-title-only.svg"/>
       </div>
     </footer>
   );

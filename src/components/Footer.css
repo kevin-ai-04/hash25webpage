@@ -4,6 +4,7 @@
   makes the background span the entire browser width.
 */
 .footer {
+  font-family: Orbitron;
   position: relative;
   left: 50%;
   margin-left: -50vw;
@@ -14,7 +15,7 @@
   color: white;
 
   /* Spacing & layout */
-  padding: 40px 0;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +31,19 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px; /* side padding for content */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-body{
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-icons {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,10 +93,16 @@
 .footer-bottom {
   width: 100%;
   background: #4b2372;
-  padding: 20px 0;
+
   margin-top: 20px;
   text-align: center;
 }
+
+.footer-bottom img{
+  margin-top: 10px;
+  height: 40px;
+}
+
 .hash-text {
   font-size: 24px;
   font-weight: bold;
