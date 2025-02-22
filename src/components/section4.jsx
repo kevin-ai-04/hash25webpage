@@ -54,8 +54,8 @@ const events = [
   },
   {
     title: "DEFINE",
-    time: "9:45 AM - 1:00 PM",
-    prize: "₹2500",
+    time: "9:00 AM 08 Mar - 4:30 PM 09 Mar",
+    prize: "₹2.5 Lakhs",
     description:
       "Transforming Tomorrow, Today",
     cta: "REGISTER",
