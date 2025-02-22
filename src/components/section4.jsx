@@ -57,7 +57,7 @@ const events = [
     time: "9:45 AM - 1:00 PM",
     prize: "₹2500",
     description:
-      "3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!",
+      "Transforming Tomorrow, Today",
     cta: "REGISTER",
     bgImage: "/define.png",
     link: "https://define25-mu.vercel.app/",

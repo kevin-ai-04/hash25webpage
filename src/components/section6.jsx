@@ -6,7 +6,6 @@ const Sponsors = () => {
     { 
       name: 'MBCETAA',
       logo: '/mbcetaa-logo.png',
-      url: 'https://mboftaa.com',
       tier: 'platinum'
     },
     {
