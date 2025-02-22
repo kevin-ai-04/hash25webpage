@@ -4,8 +4,8 @@ import "./section4.css";
 const events = [
   {
     title: "THE GREEN PITCH",
-    time: "10:00 AM - 2:00 PM",
-    prize: "₹7K",
+    time: "10:00 AM - 3:00 PM",
+    prize: "₹7000",
     description:
       "Idea Presentation. Present your innovative tech ideas to judges in a fast-paced pitch environment.",
     cta: "REGISTER",
@@ -14,8 +14,8 @@ const events = [
   },
   {
     title: "CAPTURE THE FLAG",
-    time: "10:00 AM - 2:00 PM",
-    prize: "₹8K",
+    time: "10:00 AM - 4:00 PM",
+    prize: "₹8000",
     description:
       "Cybersecurity Puzzle. Solve cybersecurity challenges and find hidden flags.",
     cta: "REGISTER",
@@ -24,8 +24,8 @@ const events = [
   },
   {
     title: "FUTSAL",
-    time: "10:00 AM - 2:00 PM",
-    prize: "₹2.5K",
+    time: "9:45 AM - 1:00 PM",
+    prize: "₹2500",
     description:
       "3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!",
     cta: "REGISTER",
@@ -34,13 +34,33 @@ const events = [
   },
   {
     title: "BLIND CODE",
-    time: "10:00 AM - 2:00 PM",
-    prize: "₹7K",
+    time: "10:00 AM - 1:00 PM",
+    prize: "₹7000",
     description:
       "Coding challenge. Replicate a web page relying purely on logic and memory.",
     cta: "REGISTER",
     bgImage: "/blind-code.png",
     link: "https://qr.codes/zmfZIW",
+  },
+  {
+    title: "IPL Auction",
+    time: "10:00 AM",
+    prize: "₹7000",
+    description:
+      "Think Fast. Bid Smart. Rule the Auction!",
+    cta: "REGISTER",
+    bgImage: "/IPL_Auction.png",
+    link: "https://qr.link/jeEy3n",
+  },
+  {
+    title: "DEFINE",
+    time: "9:45 AM - 1:00 PM",
+    prize: "₹2500",
+    description:
+      "3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!",
+    cta: "REGISTER",
+    bgImage: "/futsal.png",
+    link: "https://qr.codes/fpyROu",
   },
 ];
 const EventSection = () => {
