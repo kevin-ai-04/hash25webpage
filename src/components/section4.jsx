@@ -59,8 +59,8 @@ const events = [
     description:
       "3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!",
     cta: "REGISTER",
-    bgImage: "/futsal.png",
-    link: "https://qr.codes/fpyROu",
+    bgImage: "/define.png",
+    link: "https://define25-mu.vercel.app/",
   },
 ];
 const EventSection = () => {

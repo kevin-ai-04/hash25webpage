@@ -11,7 +11,7 @@ const Section1 = () => {
         <img src={LogoBg} alt="Hash Logo Background" className="logo-bg"/>
         <img src={Logo} alt="Hash Logo" className="logo" />
       </div>
-      <div className="prize-pool">PRIZE POOL: ₹10,000</div>
+      <div className="prize-pool">PRIZE POOL: ₹30,000</div>
     </section>
   );
 };

@@ -69,7 +69,6 @@
 /* ======= TIMELINE SECTION & HEADER ======= */
 .timeline-section {
   padding: 4rem 2rem;
-  min-height: 100vh;
   /* No background added, as per your request */
 }
 
@@ -134,10 +133,11 @@
   font-weight: bold;
 }
 
-.event-title {
+.timeline-title {
   font-size: 1.5rem;
   color: white;
   margin-bottom: 1rem;
+  font-family:Orbitron;
 }
 
 .event-description {
