@@ -33,7 +33,7 @@ function App() {
         setShowLoader(false);
         setShowSection1(true);
       }, 500); // 0.5 second fade-out duration
-    }, 3000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 

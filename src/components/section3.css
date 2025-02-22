@@ -2,7 +2,6 @@
 .load-logo-page {
   min-height: 100vh;
   width: 100vw;
-  background: radial-gradient(circle at center, #0a0a2e, #000);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +15,8 @@
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  width: 90%;
-  max-width: 800px;
+  width: 50%;
+  max-width: 400px;
   aspect-ratio: 207/198;
   display: flex;
   justify-content: center;
@@ -32,26 +31,9 @@
   margin: auto;
   position: relative;
   z-index: 3;
-  filter: drop-shadow(0 0 15px currentColor);
 }
 
-/* Dynamic Glow Effect - Centered */
-.glow-layer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle at 50% 50%, 
-      hsla(var(--hue, 270), 80%, 50%, 0.8), 
-      hsla(var(--hue, 270), 80%, 50%, 0.4) 30%, 
-      transparent 60%);
-  opacity: 0.3;
-  animation: glow-pulse 4s infinite;
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
+
 
 /* (Removed Scanline Effect to eliminate the bright/unnatural texture) */
 /*

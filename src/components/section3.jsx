@@ -32,20 +32,11 @@ const GlowingLogoPage = ({ autoRotate }) => {
     }
   }, [autoRotate]);
 
-  const handleMouseMove = (e) => {
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = (e.clientY - rect.top - rect.height / 2) / 15;
-    const y = (e.clientX - rect.left - rect.width / 2) / 15;
-    setRotation({ x, y });
-    setHue((prev) => (prev + 0.2) % 360);
-  };
 
   return (
     <section 
       className="load-logo-page"
       ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={() => setRotation({ x: 0, y: 0 })}
     >
       <div 
         className="load-logo-container"
@@ -55,7 +46,7 @@ const GlowingLogoPage = ({ autoRotate }) => {
         }}
       >
         <HashLogo />
-        <div className="glow-layer"></div>
+
         {/* Removed light-rays element if causing texture issues */}
       </div>
       {/* Removed scanline element for a cleaner look */}
