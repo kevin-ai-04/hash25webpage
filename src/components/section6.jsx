@@ -22,7 +22,7 @@ const Sponsors = () => {
     },
     {
       name: 'ETHIndia',
-      logo: '/ethindia.svg',
+      logo: '/ethindia_b.svg',
       url: 'https://ethindia2024.devfolio.co',
       tier: 'platinum'
     },

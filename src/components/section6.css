@@ -59,7 +59,7 @@
 
 /* Sponsor Card */
 .sponsor-card {
-  background: rgba(255,255,255,0.1);
+  background: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 1rem;
   position: relative;
@@ -67,14 +67,19 @@
   backdrop-filter: blur(5px);
   border: 1px solid transparent;
   overflow: hidden;
+  display: flex; /* Added */
+  justify-content: center; /* Added */
+  align-items: center; /* Added */
 }
 .sponsor-card:hover {
   transform: translateY(-10px);
   border-color: #ad52f2;
 }
 .sponsor-logo {
-  width: 100%;
-  height: auto;
+  object-fit: contain;
+  width: auto; /* Ensures proportional scaling */
+  height: 100px; /* Adjust based on your requirement */
+  max-width: 100%;
   transition: all 0.3s ease;
   filter: grayscale(0.3);
 }
