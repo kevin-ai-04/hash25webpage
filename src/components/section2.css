@@ -1,5 +1,3 @@
-
-/* Fullscreen layout */
 .happening-section {
   display: flex;
   align-items: center;
@@ -9,18 +7,15 @@
   margin-top: 100vh;
 }
 
-/* Main container */
 .container {
   width: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Add some side padding on mobile */
   padding: 0 1rem;
 }
 
-/* Heading - Centered */
 .heading {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -54,22 +49,19 @@
   transform: scale(1.05) rotate(-3deg);
 }
 
-/* Carousel Container */
 .image-carousel {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Smaller max width than before */
+  max-width: 600px;
   aspect-ratio: 16/9;
   margin: 0 auto;
   cursor: grab;
 }
 
-/* Disable text selection while dragging */
 .image-carousel:active {
   cursor: grabbing;
 }
 
-/* Carousel Image Container */
 .carousel-image {
   position: absolute;
   width: 100%;
@@ -80,7 +72,6 @@
   transform: scale(0.95);
 }
 
-/* Active and adjacent images */
 .carousel-image.active {
   opacity: 1;
   transform: scale(1);
@@ -99,7 +90,12 @@
   z-index: 1;
 }
 
-/* Buttons */
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .prev-button, .next-button {
   position: absolute;
   top: 50%;
@@ -121,52 +117,17 @@
 .prev-button { left: 10px; }
 .next-button { right: 10px; }
 
-
-/* Ensure inner images fill the container uniformly */
-.carousel-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .image-carousel {
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 768px) {
-  .heading {
-    font-size: 2.2rem;
-  }
-  
-  .description {
-    font-size: 0.9rem;
-  }
-  
-  .image-carousel {
-    max-width: 100%;
-    border-radius: 0;
-  }
-}
-
-/* Enhanced Description Animation */
 .description {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* Larger text */
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   text-align: justify;
   line-height: 1.6;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease forwards;
-  margin-bottom: 2rem; /* Some spacing below the text */
+  margin-bottom: 2rem;
 }
+
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -174,7 +135,6 @@
   }
 }
 
-/* Navigation Dots */
 .carousel-dots {
   position: absolute;
   bottom: 20px;
@@ -198,7 +158,6 @@
   transform: scale(1.2);
 }
 
-/* Image Overlay */
 .image-overlay {
   position: absolute;
   bottom: 0;
@@ -215,7 +174,12 @@
 .carousel-image:hover .image-overlay {
   opacity: 1;
 }
+
 @media (max-width: 768px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+  
   .description {
     font-size: clamp(1rem, 4vw, 1.2rem);
     margin: 0 0 1.5rem 0;
@@ -223,7 +187,6 @@
   
   .image-carousel {
     max-width: 100%;
-    aspect-ratio: 16/9;
     border-radius: 0;
   }
 }

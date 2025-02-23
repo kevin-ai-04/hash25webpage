@@ -2,15 +2,14 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color: rgba(255, 255, 255, 0.87);
   background-color: #141414;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -27,7 +26,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  
 }
 
 h1 {
@@ -53,16 +51,41 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 html, body {
   overflow-x: hidden;
   max-width: 100%;
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   html {
     font-size: 14px;
   }
+  body {
+    padding: 0 1rem;
+  }
+  h1, .heading, .section-heading, .timeline-header, .sponsors-title {
+    font-size: clamp(1.6rem, 5vw, 2rem) !important;
+    white-space: normal;
+  }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .container, .content, .timeline-grid, .events-container, .sponsors-container {
+    padding: 0 0.5rem !important;
+    margin: 0 auto;
+  }
+  
+  .happening-section {
+    margin-top: 50vh !important;
+  }
+  
+  .timeline-card, .sponsor-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
-
-

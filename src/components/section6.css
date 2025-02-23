@@ -1,9 +1,7 @@
-/* Remove background from sponsors section */
 #sponsors {
   background: none;
 }
 
-/* Sponsors Section */
 .sponsors-section {
   min-height: 50vh;
   padding: 2rem 1rem;
@@ -15,7 +13,6 @@
   justify-content: center;
 }
 
-/* Sponsors Title with star effect */
 .sponsors-title {
   text-align: center;
   font-size: 3.5rem;
@@ -38,7 +35,6 @@
   50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
 }
 
-/* Translucent container for sponsors grid only */
 .sponsors-container {
   width: 100%;
   max-width: 1200px;
@@ -48,7 +44,6 @@
   margin: 0 auto;
 }
 
-/* Sponsors Grid */
 .sponsors-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -57,7 +52,6 @@
   z-index: 2;
 }
 
-/* Sponsor Card */
 .sponsor-card {
   background: rgb(255, 255, 255);
   border-radius: 10px;
@@ -67,9 +61,9 @@
   backdrop-filter: blur(5px);
   border: 1px solid transparent;
   overflow: hidden;
-  display: flex; /* Added */
-  justify-content: center; /* Added */
-  align-items: center; /* Added */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sponsor-card:hover {
   transform: translateY(-10px);
@@ -77,8 +71,8 @@
 }
 .sponsor-logo {
   object-fit: contain;
-  width: auto; /* Ensures proportional scaling */
-  height: 100px; /* Adjust based on your requirement */
+  width: auto;
+  height: 100px;
   max-width: 100%;
   transition: all 0.3s ease;
   filter: grayscale(0.3);
@@ -98,7 +92,6 @@
   opacity: 1;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .sponsors-title {
     font-size: 2.5rem;

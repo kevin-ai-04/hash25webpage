@@ -191,3 +191,14 @@
     margin-left: 40px;
   }
 }
+@media (max-width: 767px) {
+  .timeline-card {
+    width: 100% !important;
+    margin: 0 0 2rem 0 !important;
+  }
+
+  .event-icon {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}

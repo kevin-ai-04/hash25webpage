@@ -151,3 +151,18 @@
     font-size: 1rem;
   }
 }
+@media (max-width: 767px) {
+  .events-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 !important;
+  }
+
+  .event-card {
+    height: 250px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .event-title {
+    font-size: 1.8rem !important;
+  }
+}

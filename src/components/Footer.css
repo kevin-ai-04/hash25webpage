@@ -139,3 +139,19 @@
     font-size: 18px;
   }
 }
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex-direction: column !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hash-text {
+    font-size: 1.2rem !important;
+  }
+}

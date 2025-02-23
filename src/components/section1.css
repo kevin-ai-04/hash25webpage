@@ -9,19 +9,17 @@
   }
 }
 
-/* SECTION1 CONTAINER */
 .section1-container {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* LOGO CONTAINER */
 .logo-container {
   position: absolute;
   top: 50%;
@@ -35,7 +33,6 @@
   aspect-ratio: 1/1;
 }
 
-/* BACKGROUND LOGO */
 .logo-bg {
   position: absolute;
   width: 200%;
@@ -47,7 +44,6 @@
   transition: transform 0.8s ease-in-out;
 }
 
-/* FOREGROUND LOGO */
 .logo {
   position: absolute;
   width: 120%;
@@ -56,11 +52,9 @@
   z-index: 1;
   transform: translate(-12%, -3%);
   transition: transform 0.8s ease-in-out;
-  /* New: animate from extremely zoomed-in to normal size */
   animation: logoEntrance 1s ease-out forwards;
 }
 
-/* PRIZE POOL TEXT */
 .prize-pool {
   position: relative;
   text-align: center;
@@ -71,39 +65,26 @@
   font-weight: bolder;
 }
 
-/* RESPONSIVENESS */
 @media screen and (max-width: 768px) {
-  .marquee-track {
-    font-size: 8vw;
-  }
   .logo-container {
     width: 50vw;
   }
 }
 
-/* HOVER EFFECTS */
-@media screen and (min-width: 769px) {
-  .logo-container:hover .logo {
-    transform: translate(-12%, -3%) scale(1.12);
+@media (max-width: 767px) {
+  .logo-container {
+    width: 80vw !important;
+    max-width: 300px !important;
+    top: 40% !important;
   }
-  .logo-container:hover .logo-bg {
-    transform: translate(-50%, -4%) scale(1.05);
+  .prize-pool {
+    margin-top: 70vh !important;
+    font-size: 1.2rem !important;
+  }
+  .logo-bg {
+    width: 150% !important;
   }
   .logo {
-    cursor: pointer;
-  }
-}
-@media (max-width: 768px) {
-  .load-logo-container {
-      max-width: 90vw;
-      width: 90%;
-      height: auto;
-  }
-  .logo-3d {
-      width: 50%; /* Even smaller for phone screens */
-  }
-  .glow-layer {
-      width: 250%;
-      height: 250%;
+    width: 100% !important;
   }
 }
