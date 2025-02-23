@@ -91,20 +91,16 @@
 .sponsor-card:hover .hover-glow {
   opacity: 1;
 }
-
 @media (max-width: 768px) {
-  .sponsors-title {
-    font-size: 2.5rem;
-  }
   .sponsors-container {
-    padding: 1.5rem;
+    width: 90% !important;
+    padding: 1rem !important;
   }
-}
-@media (max-width: 375px) {
-  .sponsors-title {
-    font-size: 2rem;
+  .sponsor-card {
+    width: 80% !important;
+    padding: 1rem !important;
   }
-  .sponsors-container {
-    padding: 1rem;
+  .sponsor-logo {
+    height: 80px !important;
   }
 }

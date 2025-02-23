@@ -62,25 +62,12 @@
 }
 
 @media (max-width: 768px) {
-  .load-logo-container {
-      max-width: 90vw;
-      width: 90%;
-      height: auto;
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .logo-3d {
-      width: 50%;
-  }
-  .glow-layer {
-      width: 250%;
-      height: 250%;
-  }
-}
-
-@media (max-width: 375px) {
-  .load-logo-container {
-      max-width: 80vw;
-  }
-  .logo-3d {
-      width: 50% !important;
+  .loader-logo {
+    width: 100px !important;
   }
 }

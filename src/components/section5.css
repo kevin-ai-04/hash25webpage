@@ -162,43 +162,15 @@
   left: -30px;
 }
 
-/* ======= RESPONSIVE STYLES ======= */
 @media (max-width: 768px) {
   .timeline-card {
-    width: 100%;
-    transform: translateX(0) !important;
+    width: 90% !important;
+    padding: 1rem !important;
   }
-
-  .event-icon {
-    left: 50%;
-    transform: translateX(-50%);
+  .timeline-title {
+    font-size: 1.5rem !important;
   }
-
-  .timeline-line {
-    left: 20px;
-  }
-
-  .event-icon {
-    left: -25px;
-    transform: none;
-  }
-
-  .event-connector {
-    display: none;
-  }
-
-  .timeline-content {
-    margin-left: 40px;
-  }
-}
-@media (max-width: 767px) {
-  .timeline-card {
-    width: 100% !important;
-    margin: 0 0 2rem 0 !important;
-  }
-
-  .event-icon {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  .event-time {
+    font-size: 1rem !important;
   }
 }
