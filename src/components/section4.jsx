@@ -28,9 +28,8 @@ const events = [
     prize: "₹2500",
     description:
       "3V3 Teams. For football fans, it’s time to shine—pass, play, and dominate the game!",
-    cta: "REGISTER",
+    cta: "Registrations closed",
     bgImage: "/futsal.png",
-    link: "https://qr.codes/fpyROu",
   },
   {
     title: "BLIND CODE",
