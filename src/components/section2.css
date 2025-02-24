@@ -1,4 +1,5 @@
 .happening-section {
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +120,6 @@
 
 .description {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   text-align: justify;
   line-height: 1.6;
   opacity: 0;
