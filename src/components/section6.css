@@ -22,6 +22,7 @@
   position: relative;
   z-index: 2;
 }
+
 .sponsors-title::after {
   content: "✨";
   position: absolute;
@@ -30,6 +31,7 @@
   animation: sparkle 2s infinite;
   opacity: 0;
 }
+
 @keyframes sparkle {
   0%, 100% { opacity: 0; transform: scale(0); }
   50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
@@ -65,10 +67,12 @@
   justify-content: center;
   align-items: center;
 }
+
 .sponsor-card:hover {
   transform: translateY(-10px);
   border-color: #ad52f2;
 }
+
 .sponsor-logo {
   object-fit: contain;
   width: auto;
@@ -77,10 +81,12 @@
   transition: all 0.3s ease;
   filter: grayscale(0.3);
 }
+
 .sponsor-card:hover .sponsor-logo {
   filter: grayscale(0);
   transform: scale(1.1);
 }
+
 .hover-glow {
   position: absolute;
   inset: 0;
@@ -88,18 +94,30 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .sponsor-card:hover .hover-glow {
   opacity: 1;
 }
+
+/* ✅ FORCE 2 COLUMNS ON MOBILE */
 @media (max-width: 768px) {
   .sponsors-container {
     width: 90% !important;
     padding: 1rem !important;
   }
+
+  /* More specific selector to override styles */
+  .sponsors-container .sponsors-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
   .sponsor-card {
-    width: 80% !important;
+    width: 100% !important;
     padding: 1rem !important;
   }
+
   .sponsor-logo {
     height: 80px !important;
   }
