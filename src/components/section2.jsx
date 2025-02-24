@@ -7,7 +7,7 @@ const images = [
   { src: 'hash-img3.png' },
   { src: 'hash-img4.png' },
   // { src: 'hash-img1.png' },
-  { src: 'hash-img1.png' }
+  // { src: 'hash-img1.png' }
 ];
 
 const HappeningSection = () => {
