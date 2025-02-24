@@ -59,7 +59,7 @@ const events = [
       "Transforming Tomorrow, Today",
     cta: "REGISTER",
     bgImage: "/define.png",
-    link: "https://define25-mu.vercel.app/",
+    link: "https://www.define3.xyz/",
   },
 ];
 const EventSection = () => {

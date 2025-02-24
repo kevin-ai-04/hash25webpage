@@ -6,7 +6,7 @@ const images = [
   { src: 'hash-img2.png' },
   { src: 'hash-img3.png' },
   { src: 'hash-img4.png' },
-  { src: 'hash-img1.png' },
+  // { src: 'hash-img1.png' },
   { src: 'hash-img1.png' }
 ];
 
@@ -62,13 +62,16 @@ const HappeningSection = () => {
         <div className="content">
           <div className="left-column">
             <p className="description">
-              The department of <strong>Computer Science</strong> and Engineering of
-              <strong> Mar Baselios</strong> College of Engineering and Technology invites you
-              to <strong>HASH'25</strong>, the technical fest with exhilarating competitions,
-              stunning displays of skill, and a plethora of cutting-edge technologies.
+              The <strong>Computer Science & Engineering Department</strong> of <strong>Mar Baselios College of Engineering 
+              and Technology (Autonomous)</strong>, Thiruvananthapuram proudly presents HASH 2025, the much-awaited 
+              annual tech fest!
               <br /><br />
-              This two-day technical fest is aimed to blow your minds with events such as
-              idea presentation, coding challenge, 24-hour hackathon, and much more!
+              This year, we’ve got a thrilling mix of technical and non-technical events that will 
+              challenge your intellect and creativity. Whether you’re a sports enthusiast, a coding 
+              genius, or an aspiring sustainability innovator, there’s something for everyone.
+              <br /><br />
+              Join us at HASH 2025 and be a part of the fun! Whether you’re competing or simply soaking in the excitement, 
+              this is one event you don’t want to miss. Let’s come together, push our boundaries, and create lasting memories!
             </p>
           </div>
 
