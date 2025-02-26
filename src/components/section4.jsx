@@ -10,7 +10,7 @@ const events = [
       "Idea Presentation. Present your innovative tech ideas to judges in a fast-paced pitch environment.",
     cta: "REGISTER",
     bgImage: "/GreenPitch.png",
-    link: "https://qr.codes/JrzyC2",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSda1zX3DyzjdkSxJzB17m6PAPatPa1hNGApCFOxhlBaRGd5ZA/viewform",
   },
   {
     title: "CAPTURE THE FLAG",
@@ -20,7 +20,7 @@ const events = [
       "Cybersecurity Puzzle. Solve cybersecurity challenges and find hidden flags.",
     cta: "REGISTER",
     bgImage: "/CTF.png",
-    link: "https://qr.codes/1WALQi",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfb53iXRFX5RAhl6xI-y0xC-JfMRgIsV7RFf1OX_R3KlOJsQg/viewform",
   },
   {
     title: "FUTSAL",
@@ -39,7 +39,7 @@ const events = [
       "Coding challenge. Replicate a web page relying purely on logic and memory.",
     cta: "REGISTER",
     bgImage: "/blind-code.png",
-    link: "https://qr.codes/zmfZIW",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdDuK-cEUZ_8wiIfbPQQHNS5paJZjYrwWh0g3TNDdgw7kvH5Q/viewform",
   },
   {
     title: "IPL Auction",
@@ -49,7 +49,7 @@ const events = [
       "Think Fast. Bid Smart. Rule the Auction!",
     cta: "REGISTER",
     bgImage: "/IPL_Auction.png",
-    link: "https://qr.link/jeEy3n",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdqdqh_LN5L7d3MhIHlD4qTsnXk0di6f0viuIWChOaff_zRyQ/viewform",
   },
   {
     title: "DEFINE",
